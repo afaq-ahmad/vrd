@@ -14,7 +14,7 @@ hdf5_path = ['gt/train/','gt/test/']
 f = h5py.File(file_path, "r")
 
 for r in range(2):
-	img_list = f[hdf5_path[r]].keys()
+	img_list = list(f[hdf5_path[r]].keys())
 	len_img = len(img_list)
 	roidb = []
 
